@@ -126,7 +126,7 @@
             <objects>
                 <viewController id="EjS-1X-pb7" userLabel="PhotosTab" customClass="PhotoViewController" customModule="codepathWeek1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5k1-c1-7uO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="fOL-Uc-cW7">
@@ -163,7 +163,7 @@
             <objects>
                 <viewController id="eVZ-WG-62h" userLabel="FilesTab" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yvw-sD-9Ay">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="existing_files" id="XMN-4g-GtT">
@@ -258,7 +258,7 @@
                                 <rect key="frame" x="0.0" y="102" width="320" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="w5b-0n-Kof" kind="modal" id="hBv-AA-sSN"/>
+                                    <segue destination="w5b-0n-Kof" kind="modal" animates="NO" id="hBv-AA-sSN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sbc-5G-DPc">
@@ -501,7 +501,7 @@
             <objects>
                 <viewController id="Ctj-MH-niO" userLabel="FavoritesTab" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rDG-HK-2eo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" id="YgY-u0-ePR">
@@ -527,11 +527,21 @@
         <!--SettingsTab-->
         <scene sceneID="YsQ-gx-WZ3">
             <objects>
-                <viewController id="XVC-SA-vvb" userLabel="SettingsTab" customClass="SettingsViewController" customModule="codepathWeek1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="XVC-SA-vvb" userLabel="SettingsTab" customClass="SettingsViewController" customModule="codepathWeek1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HVz-oT-xsz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="qge-JS-uCy" userLabel="Settings Scroll View">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="settings" id="U8J-WN-0NO">
+                                        <rect key="frame" x="0.0" y="-34" width="320" height="772"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
                             <navigationBar contentMode="scaleToFill" translucent="NO" id="sCQ-b7-JgR">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -539,14 +549,13 @@
                                     <navigationItem title="Settings" id="OSi-tR-GYO"/>
                                 </items>
                             </navigationBar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="qge-JS-uCy">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Setting" image="settings_tab" id="sfq-qh-irA"/>
+                    <connections>
+                        <outlet property="SettingsScrollView" destination="qge-JS-uCy" id="Js1-H9-KfU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ay8-eh-CEw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -574,7 +583,6 @@
         <!--View Controller-->
         <scene sceneID="sgG-Kj-42C">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e60-Cs-dQk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="vkO-Xy-6Id" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mD7-px-IzZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -589,6 +597,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="lyG-TQ-90V"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e60-Cs-dQk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3872" y="1164"/>
         </scene>
@@ -688,6 +697,7 @@
         <image name="files_tab" width="30" height="30"/>
         <image name="logged_out" width="320" height="568"/>
         <image name="photos_tab" width="30" height="30"/>
+        <image name="settings" width="320" height="772"/>
         <image name="settings_tab" width="30" height="30"/>
         <image name="sign_in1" width="320" height="568"/>
         <image name="sign_in2" width="320" height="568"/>
@@ -698,10 +708,10 @@
         <image name="welcome3" width="320" height="568"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UJs-47-pbe"/>
-        <segue reference="qPr-43-1q6"/>
-        <segue reference="MLu-BF-FAL"/>
-        <segue reference="7gD-jH-3Kn"/>
+        <segue reference="n4N-hE-BaE"/>
+        <segue reference="Rah-Ir-wl7"/>
         <segue reference="Q40-ej-04o"/>
+        <segue reference="MLu-BF-FAL"/>
+        <segue reference="qPr-43-1q6"/>
     </inferredMetricsTieBreakers>
 </document>
