@@ -16,14 +16,11 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="welcome1" id="0eS-C8-fUL" userLabel="Welcome1 Image">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vLl-bj-iJI" userLabel="Next Welcome Button">
-                                <rect key="frame" x="132" y="0.0" width="188" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <segue destination="Acd-Ix-RPR" kind="push" id="6Fx-0T-CmB"/>
+                                    <outletCollection property="gestureRecognizers" destination="qzv-b2-bKk" appends="YES" id="H48-dq-x5q"/>
                                 </connections>
-                            </button>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6Ii-xx-ZI8">
                                 <rect key="frame" x="132" y="442" width="56" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -37,6 +34,11 @@
                     <navigationItem key="navigationItem" id="Gtx-5j-Tdt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="qzv-b2-bKk">
+                    <connections>
+                        <segue destination="Acd-Ix-RPR" kind="push" id="C7R-VH-AYf"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="713" y="406"/>
         </scene>
@@ -126,7 +128,7 @@
             <objects>
                 <viewController id="EjS-1X-pb7" userLabel="PhotosTab" customClass="PhotoViewController" customModule="codepathWeek1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5k1-c1-7uO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="fOL-Uc-cW7">
@@ -163,7 +165,7 @@
             <objects>
                 <viewController id="eVZ-WG-62h" userLabel="FilesTab" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yvw-sD-9Ay">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="existing_files" id="XMN-4g-GtT">
@@ -284,10 +286,10 @@
             </objects>
             <point key="canvasLocation" x="2642" y="406"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="gkE-Fr-bLx">
             <objects>
-                <viewController id="Acd-Ix-RPR" sceneMemberID="viewController">
+                <viewController id="Acd-Ix-RPR" customClass="WelcomeViewController" customModule="codepathWeek1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Icu-Ps-9hJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -295,27 +297,35 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="welcome2" id="dI0-O5-9dt" userLabel="Welcome2 Image">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pJ8-bR-gqC" userLabel="Next Welcome Button">
-                                <rect key="frame" x="224" y="0.0" width="96" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <segue destination="l4J-FS-eTu" kind="push" id="Y7Q-Qo-GNY"/>
+                                    <outletCollection property="gestureRecognizers" destination="AuL-TU-6VD" appends="YES" id="J0M-or-qv5"/>
+                                    <outletCollection property="gestureRecognizers" destination="eG5-uA-Nd6" appends="YES" id="yEo-xc-mmQ"/>
                                 </connections>
-                            </button>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="BEA-wU-nKH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mu8-IT-A5X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="AuL-TU-6VD">
+                    <connections>
+                        <action selector="swipeRight:" destination="Acd-Ix-RPR" id="9Dz-xg-Dbs"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="eG5-uA-Nd6">
+                    <connections>
+                        <segue destination="l4J-FS-eTu" kind="push" id="39g-K3-Zxo"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1101" y="406"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome2 View Controller-->
         <scene sceneID="wSs-Em-0ib">
             <objects>
-                <viewController id="l4J-FS-eTu" sceneMemberID="viewController">
+                <viewController id="l4J-FS-eTu" customClass="Welcome2ViewController" customModule="codepathWeek1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w3d-35-AFz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -323,9 +333,13 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="welcome3" id="sGh-KN-oGJ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="br7-wc-dvz" appends="YES" id="uL1-lj-evn"/>
+                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Rah-p9-cYn">
-                                <rect key="frame" x="30" y="383" width="262" height="45"/>
+                                <rect key="frame" x="30" y="383" width="262" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="haA-3m-eiE" kind="modal" id="7p1-39-rPt"/>
@@ -337,6 +351,11 @@
                     <navigationItem key="navigationItem" id="a3s-La-2Cd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wsi-gU-tuH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="br7-wc-dvz">
+                    <connections>
+                        <action selector="swipeRight:" destination="l4J-FS-eTu" id="h1s-Ba-njq"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1492" y="406"/>
         </scene>
@@ -501,7 +520,7 @@
             <objects>
                 <viewController id="Ctj-MH-niO" userLabel="FavoritesTab" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rDG-HK-2eo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" id="YgY-u0-ePR">
@@ -529,15 +548,22 @@
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="XVC-SA-vvb" userLabel="SettingsTab" customClass="SettingsViewController" customModule="codepathWeek1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HVz-oT-xsz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="qge-JS-uCy" userLabel="Settings Scroll View">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="qVq-Zw-aZl">
+                                        <rect key="frame" x="0.0" y="661" width="320" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <segue destination="BdV-fW-yJr" kind="modal" id="pwW-ya-0Ts"/>
+                                        </connections>
+                                    </button>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="settings" id="U8J-WN-0NO">
-                                        <rect key="frame" x="0.0" y="-34" width="320" height="772"/>
+                                        <rect key="frame" x="0.0" y="-36" width="320" height="772"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                 </subviews>
@@ -555,6 +581,7 @@
                     <tabBarItem key="tabBarItem" title="Setting" image="settings_tab" id="sfq-qh-irA"/>
                     <connections>
                         <outlet property="SettingsScrollView" destination="qge-JS-uCy" id="Js1-H9-KfU"/>
+                        <outlet property="settingsImageView" destination="U8J-WN-0NO" id="s3E-uU-iwV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ay8-eh-CEw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -583,7 +610,7 @@
         <!--View Controller-->
         <scene sceneID="sgG-Kj-42C">
             <objects>
-                <viewController id="vkO-Xy-6Id" sceneMemberID="viewController">
+                <viewController id="vkO-Xy-6Id" customClass="TOSViewController" customModule="codepathWeek1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mD7-px-IzZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -592,6 +619,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uqF-mQ-DxL">
+                                <rect key="frame" x="268" y="28" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="vkO-Xy-6Id" eventType="touchUpInside" id="4iw-qQ-fF4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -708,10 +742,10 @@
         <image name="welcome3" width="320" height="568"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="n4N-hE-BaE"/>
-        <segue reference="Rah-Ir-wl7"/>
+        <segue reference="pwW-ya-0Ts"/>
         <segue reference="Q40-ej-04o"/>
+        <segue reference="Rah-Ir-wl7"/>
         <segue reference="MLu-BF-FAL"/>
-        <segue reference="qPr-43-1q6"/>
+        <segue reference="7p1-39-rPt"/>
     </inferredMetricsTieBreakers>
 </document>

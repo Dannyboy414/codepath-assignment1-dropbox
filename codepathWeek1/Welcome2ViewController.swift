@@ -1,28 +1,28 @@
 //
-//  SettingsViewController.swift
+//  Welcome2ViewController.swift
 //  codepathWeek1
 //
-//  Created by Daniel Kim on 2/4/16.
+//  Created by Daniel Kim on 2/5/16.
 //  Copyright © 2016 Daniel Kim. All rights reserved.
 //
 
 import UIKit
 
-class SettingsViewController: UIViewController {
-    @IBOutlet weak var SettingsScrollView: UIScrollView!
- 
-    @IBOutlet weak var settingsImageView: UIImageView!
+class Welcome2ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        SettingsScrollView.contentSize = settingsImageView.frame.size
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func swipeRight(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
 

@@ -1,23 +1,23 @@
 //
-//  SettingsViewController.swift
+//  TOSViewController.swift
 //  codepathWeek1
 //
-//  Created by Daniel Kim on 2/4/16.
+//  Created by Daniel Kim on 2/5/16.
 //  Copyright © 2016 Daniel Kim. All rights reserved.
 //
 
 import UIKit
 
-class SettingsViewController: UIViewController {
-    @IBOutlet weak var SettingsScrollView: UIScrollView!
- 
-    @IBOutlet weak var settingsImageView: UIImageView!
+class TOSViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        SettingsScrollView.contentSize = settingsImageView.frame.size
+    }
+    @IBAction func doneButtonPressed(sender: AnyObject) {
+        print("tapping")
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {

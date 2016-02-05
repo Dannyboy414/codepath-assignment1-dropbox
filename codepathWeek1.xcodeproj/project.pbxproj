@@ -17,6 +17,9 @@
 		74A319C01C641AD100CC14FB /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A319BF1C641AD100CC14FB /* ForgotPasswordViewController.swift */; };
 		74A319C21C6423FE00CC14FB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A319C11C6423FE00CC14FB /* SettingsViewController.swift */; };
 		74A319C41C642D3100CC14FB /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A319C31C642D3100CC14FB /* PhotoViewController.swift */; };
+		74ADC7F51C6556530036D251 /* TOSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74ADC7F41C6556530036D251 /* TOSViewController.swift */; };
+		74ADC7F71C655C320036D251 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74ADC7F61C655C320036D251 /* WelcomeViewController.swift */; };
+		74ADC7F91C655CE40036D251 /* Welcome2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74ADC7F81C655CE40036D251 /* Welcome2ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		74A319BF1C641AD100CC14FB /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		74A319C11C6423FE00CC14FB /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		74A319C31C642D3100CC14FB /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		74ADC7F41C6556530036D251 /* TOSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TOSViewController.swift; sourceTree = "<group>"; };
+		74ADC7F61C655C320036D251 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		74ADC7F81C655CE40036D251 /* Welcome2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Welcome2ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,9 @@
 				74A319BF1C641AD100CC14FB /* ForgotPasswordViewController.swift */,
 				74A319C11C6423FE00CC14FB /* SettingsViewController.swift */,
 				74A319C31C642D3100CC14FB /* PhotoViewController.swift */,
+				74ADC7F41C6556530036D251 /* TOSViewController.swift */,
+				74ADC7F61C655C320036D251 /* WelcomeViewController.swift */,
+				74ADC7F81C655CE40036D251 /* Welcome2ViewController.swift */,
 				742194421C62E18500EE6B79 /* ViewController.swift */,
 				742194441C62E18500EE6B79 /* Main.storyboard */,
 				742194471C62E18500EE6B79 /* Assets.xcassets */,
@@ -269,10 +278,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				742194431C62E18500EE6B79 /* ViewController.swift in Sources */,
+				74ADC7F51C6556530036D251 /* TOSViewController.swift in Sources */,
 				742194411C62E18500EE6B79 /* AppDelegate.swift in Sources */,
 				74A319C01C641AD100CC14FB /* ForgotPasswordViewController.swift in Sources */,
+				74ADC7F91C655CE40036D251 /* Welcome2ViewController.swift in Sources */,
 				74A319C21C6423FE00CC14FB /* SettingsViewController.swift in Sources */,
 				74A319C41C642D3100CC14FB /* PhotoViewController.swift in Sources */,
+				74ADC7F71C655C320036D251 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
