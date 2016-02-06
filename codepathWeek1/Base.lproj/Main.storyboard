@@ -159,14 +159,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ch-tO-ylL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1359" y="2626"/>
+            <point key="canvasLocation" x="1143" y="2718"/>
         </scene>
         <!--Photos-->
         <scene sceneID="uh4-sW-c2R">
             <objects>
                 <viewController id="cVD-fk-fvi" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vzt-Ok-FjX">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="empty_files" id="UrK-XU-vgw">
@@ -187,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Koc-UB-6hk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1754" y="2626"/>
+            <point key="canvasLocation" x="1564" y="2718"/>
         </scene>
         <!--FilesTab-->
         <scene sceneID="vLP-dW-FAS">
@@ -273,10 +273,10 @@
             </objects>
             <point key="canvasLocation" x="1857" y="1164"/>
         </scene>
-        <!--View Controller-->
+        <!--Log In View Controller-->
         <scene sceneID="zWJ-FZ-YSl">
             <objects>
-                <viewController id="YdR-g6-wY4" sceneMemberID="viewController">
+                <viewController id="YdR-g6-wY4" customClass="LogInViewController" customModule="codepathWeek1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pWa-Si-74U">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -285,13 +285,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Rw6-Zm-Wx5">
-                                <rect key="frame" x="0.0" y="102" width="320" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="w5b-0n-Kof" kind="modal" animates="NO" id="hBv-AA-sSN"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sbc-5G-DPc">
                                 <rect key="frame" x="70" y="196" width="181" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -306,10 +299,39 @@
                                     <segue destination="BdV-fW-yJr" kind="modal" id="n4N-hE-BaE"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" id="jib-Pa-pmj">
+                                <rect key="frame" x="115" y="108" width="176" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="WCg-Fp-NeN">
+                                <rect key="frame" x="115" y="149" width="176" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cwL-FW-Amk">
+                                <rect key="frame" x="250" y="27" width="67" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96470588235294119" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <segue destination="uji-qi-9Oz" kind="modal" id="tpH-mv-OGl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="667-Qc-7d0"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="jib-Pa-pmj" id="vKd-4A-MJ6"/>
+                        <outlet property="loginButton" destination="cwL-FW-Amk" id="fdw-Ta-IxR"/>
+                        <outlet property="passwordTextField" destination="WCg-Fp-NeN" id="sUY-rl-urB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eis-Ta-kJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -570,7 +592,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k5b-2b-2yX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2024" y="1907"/>
+            <point key="canvasLocation" x="1564" y="1907"/>
         </scene>
         <!--SettingsTab-->
         <scene sceneID="YsQ-gx-WZ3">
@@ -615,7 +637,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ay8-eh-CEw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2397" y="1907"/>
+            <point key="canvasLocation" x="1945" y="1907"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NEG-g7-oZw">
@@ -663,55 +685,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e60-Cs-dQk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3872" y="1164"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="WUD-ss-1lD">
-            <objects>
-                <viewController id="w5b-0n-Kof" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9BS-e2-pVy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="sign_in2" id="Zta-q3-Rwb">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Kxf-LW-LsQ">
-                                <rect key="frame" x="239" y="516" width="81" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="uji-qi-9Oz" kind="modal" id="Q40-ej-04o"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zRt-dR-lVk">
-                                <rect key="frame" x="70" y="196" width="181" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="Vf2-6V-Int" kind="push" animates="NO" id="7gD-jH-3Kn"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kpk-C0-iv3">
-                                <rect key="frame" x="256" y="27" width="58" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="uji-qi-9Oz" kind="modal" id="i5X-LZ-0wP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UR6-r3-Fgo">
-                                <rect key="frame" x="6" y="27" width="99" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="BdV-fW-yJr" kind="modal" id="1HJ-YT-zuT"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="O1R-6e-ddf"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wm7-sb-NpO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3042" y="406"/>
         </scene>
         <!--Forgot Password View Controller-->
         <scene sceneID="G6E-Nt-9GE">
@@ -763,14 +736,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gqu-vy-TlT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1359" y="1907"/>
+            <point key="canvasLocation" x="1143" y="1907"/>
         </scene>
         <!--Photos-->
         <scene sceneID="o6r-Pe-9Cm">
             <objects>
                 <viewController id="w4B-bt-hd0" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Uy-dm-P76">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="empty_files" id="DQD-PE-KGd">
@@ -787,7 +760,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kQh-4i-CRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2156" y="2626"/>
+            <point key="canvasLocation" x="1945" y="2718"/>
         </scene>
     </scenes>
     <resources>
@@ -809,7 +782,6 @@
         <image name="settings" width="320" height="772"/>
         <image name="settings_tab" width="30" height="30"/>
         <image name="sign_in1" width="320" height="568"/>
-        <image name="sign_in2" width="320" height="568"/>
         <image name="sign_in3" width="320" height="568"/>
         <image name="terms" width="320" height="568"/>
         <image name="welcome1" width="320" height="568"/>
@@ -817,10 +789,9 @@
         <image name="welcome3" width="320" height="568"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Gfb-0Z-3Rn"/>
+        <segue reference="n4N-hE-BaE"/>
+        <segue reference="tpH-mv-OGl"/>
         <segue reference="MLu-BF-FAL"/>
-        <segue reference="Q40-ej-04o"/>
-        <segue reference="7gD-jH-3Kn"/>
         <segue reference="7p1-39-rPt"/>
     </inferredMetricsTieBreakers>
 </document>
