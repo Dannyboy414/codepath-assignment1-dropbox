@@ -22,6 +22,6 @@ Watched the video tutorial and some other how to’s to make welcome screen.
 
 Walkthrough of all user stories:
 
-![Video Walkthrough](tipCalculator.gif)
+![Video Walkthrough](dropbox.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
