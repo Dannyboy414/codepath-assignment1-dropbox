@@ -22,7 +22,7 @@ class ForgotPasswordViewController: UIViewController {
     }
     
     @IBAction func cancelButtonPressed(sender: AnyObject) {
-        self.navigationController?.popViewControllerAnimated(false)
+        dismissViewControllerAnimated(false, completion: nil)
     }
 
     /*

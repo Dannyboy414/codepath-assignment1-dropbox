@@ -28,6 +28,10 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func backButtonPressed() {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         if self.passwordTextField.text?.characters.count >= 8 && self.emailTextField.text?.characters.count > 0 {
             self.loginButton.enabled = true
